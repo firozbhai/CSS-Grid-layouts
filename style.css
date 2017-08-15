@@ -1,0 +1,96 @@
+*{
+	margin:0;
+	padding:0;
+	
+}
+@media screen and (min-width:736px){
+
+
+.grid{
+	display: grid;
+	grid-template-columns: 1fr 500px 500px 1fr;
+	grid-template-areas: " . title title . "
+	" . header header . "
+	" . slidebar comments . "
+	" . footer footer . ";
+	grid-gap:10px;
+	} 
+}
+
+}
+@media screen and (min-width:736px){
+	
+
+.grid{
+	display: grid;
+	grid-template-columns: 1fr  1fr;
+	grid-template-areas: " title title "
+	" header header "
+	" slidebar slidebar "
+	"comments comments"
+	" footer footer ";
+	grid-gap:10px;
+	} 
+}
+/* below three classes are almost same */
+
+/* 01______________________ */
+
+/* .title{
+
+	grid-column:1/3;
+} */
+
+
+/* 02_______________________ */
+
+/* .title{
+
+	grid-column-end: span 2;
+} */
+
+
+/* 03_______________________ */
+
+/* .title{
+	grid-column-start:1;
+	grid-column-end:3;
+} */
+
+.title {
+
+	grid-area: title;
+}
+
+.header {
+
+	grid-area: header;
+}
+
+
+.slidebar {
+
+	grid-area: slidebar;
+}
+
+.comments {
+
+	grid-area: comments;
+	/* justify-self: start;  */
+}
+
+
+.footer {
+
+	grid-area:footer;
+}
+
+
+.grid div:nth-child(even){
+background-color: red;
+}
+
+
+.grid div:nth-child(odd){
+background-color: green;
+}
