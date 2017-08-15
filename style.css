@@ -1,36 +1,39 @@
 *{
 	margin:0;
 	padding:0;
+	background-color: #f0f0f0;
 	
 }
-@media screen and (min-width:736px){
 
+
+	
 
 .grid{
 	display: grid;
-	grid-template-columns: 1fr 500px 500px 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 40px 300px 150px 150px 40px;
+	grid-template-areas: "title title"
+	" header header "
+	" slidebar slidebar "
+	" comments comments "
+	" footer footer ";
+	grid-gap:10px;
+	} 
+
+@media screen and (min-width:1170px) {
+
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 540px 540px 1fr;
+	grid-template-rows: 50px 500px 300px 50px;
 	grid-template-areas: " . title title . "
 	" . header header . "
 	" . slidebar comments . "
 	" . footer footer . ";
 	grid-gap:10px;
 	} 
-}
 
-}
-@media screen and (min-width:736px){
-	
-
-.grid{
-	display: grid;
-	grid-template-columns: 1fr  1fr;
-	grid-template-areas: " title title "
-	" header header "
-	" slidebar slidebar "
-	"comments comments"
-	" footer footer ";
-	grid-gap:10px;
-	} 
 }
 /* below three classes are almost same */
 
@@ -60,6 +63,7 @@
 .title {
 
 	grid-area: title;
+
 }
 
 .header {
@@ -87,10 +91,10 @@
 
 
 .grid div:nth-child(even){
-background-color: red;
+background-color: white;
 }
 
 
 .grid div:nth-child(odd){
-background-color: green;
+background-color: white;
 }
